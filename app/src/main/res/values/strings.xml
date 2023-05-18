@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">EnglishFlashcard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home">Home</string>
+    <string name="setting">Setting</string>
+    <string name="add_phases">Add phases</string>
+    <string name="no_results_found">No results found</string>
+    <string name="you_re_offline">You\'re offline</string>
+    <string name="try_again">Try again</string>
+    <string name="please_check_internet_connection">Please check internet connection</string>
+    <string name="learn_this_set">Learn this set</string>
+    <string name="add_set">Add set</string>
+    <string name="create">Create</string>
+    <string name="number_of_phases">Number of phases</string>
+    <string name="lesson_type">Lesson type</string>
+    <string name="lesson_name">Lesson name</string>
+    <string name="search">Search</string>
+    <string name="empty_list">Empty list</string>
+    <string name="save">Save</string>
+    <string name="auto_play_is_on">Auto play is on</string>
+    <string name="content">Nerver trust anyone who has not brought a \nbook with them</string>
+    <string name="short_content">Learning with FlashCard</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="register">Register</string>
+
+    // setting
+    <string name="general">General</string>
+    <string name="more_info">More information</string>
+    <string name="private_policy_content">Legal document that discloses.</string>
+    <string name="term_of_service_content">Terms of service are the legal agreements.</string>
+    <string name="contact_us">Contact us</string>
+    <string name="contact_us_content">Looking for inspiration for your contact us.</string>
+    <string name="rate_us">Rate us</string>
+    <string name="rate_us_content">Please leave us a review.</string>
+    <string name="number_is_invalid">Number is invalid</string>
+
+    <string name="term_of_service">Term of service</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="time_notification">Time notification</string>
+    <string name="discovery">Discovery</string>
+    <string name="user_information">User information</string>
+    <string name="account">Account</string>
+</resources>

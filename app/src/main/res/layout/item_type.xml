@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.dungtran.android.core.englishflashcard.ui.features.createset.typedialog.TypeItem" />
+        <variable
+            name="itemPosition"
+            type="Integer" />
+        <variable
+            name="itemListener"
+            type="com.dungtran.android.core.englishflashcard.ui.features.createset.typedialog.TypeItemClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:elevation="@dimen/dp_1"
+        app:cardCornerRadius="@dimen/dp_3"
+        android:onClick="@{() -> itemListener.onItemClick(item, itemPosition)}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_marginVertical="@dimen/dp_8">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start"
+                android:lines="1"
+                android:text="@{item.text}"
+                android:textStyle="bold"
+                tools:text="geell- dfkjsk"
+                android:textColor="@color/accent_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

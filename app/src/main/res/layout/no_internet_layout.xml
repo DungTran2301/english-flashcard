@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:gravity="center"
+        android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/you_re_offline"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15"
+        android:fontFamily="@font/poppins_semi_bold"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/please_check_internet_connection"
+        android:textSize="@dimen/sp_15"
+        android:layout_marginTop="@dimen/dp_16"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textAllCaps="false"
+        android:text="@string/try_again"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_24"
+        android:paddingEnd="@dimen/dp_24"
+        android:textSize="@dimen/sp_15"
+        android:background="@drawable/bg_button_retry"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

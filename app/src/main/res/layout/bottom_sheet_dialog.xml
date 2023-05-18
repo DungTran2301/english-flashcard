@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_5"
+                android:layout_marginVertical="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_gravity="center_horizontal"
+                android:text="Choose lesson"
+                android:textColor="@color/accent_primary"
+                android:textSize="@dimen/sp_20"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/accent_secondary"
+                android:layout_marginHorizontal="@dimen/dp_100"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/sp_20"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5"
+                    android:layout_marginVertical="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_gravity="left"
+                    android:text="Learn by card"
+                    android:textColor="@color/accent_primary"
+                    android:textSize="@dimen/sp_17"
+                    android:fontFamily="@font/poppins_regular"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_secondary"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMultipleChoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5"
+                    android:layout_marginVertical="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_gravity="left"
+                    android:text="Multiple choice"
+                    android:textColor="@color/accent_primary"
+                    android:textSize="@dimen/sp_17"
+                    android:fontFamily="@font/poppins_regular"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/text_secondary"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

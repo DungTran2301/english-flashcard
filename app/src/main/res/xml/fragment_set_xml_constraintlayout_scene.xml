@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <KeyFrameSet>
+
+        </KeyFrameSet>
+        <OnSwipe
+            motion:dragDirection="dragUp"
+
+            motion:touchAnchorId="@+id/linearLayoutCompat"
+            motion:touchAnchorSide="top" />
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/guideline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintGuide_begin="56dp" />
+        <Constraint
+            android:id="@+id/guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintGuide_begin="80dp" />
+
+        <Constraint
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/toolBar"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/guideline2"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toTopOf="@+id/guideline1"
+            motion:layout_editor_absoluteX="50dp" />
+        <Constraint
+            android:id="@+id/toolbarTitle"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/toolBar"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:alpha="1"
+            android:layout_marginStart="@dimen/dp_58"
+            motion:layout_constraintTop_toTopOf="@id/toolBar"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+</MotionScene>

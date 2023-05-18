@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+        name="viewModel"
+        type="com.dungtran.android.core.englishflashcard.ui.features.discovery.DiscoveryViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/tool_bar_elevation"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_left"
+            app:title="@string/discovery"
+            app:titleTextColor="@color/accent_primary"
+            app:titleTextAppearance="@style/Theme.ToolbarTextAppearance"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcSet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                tools:listitem="@layout/item_set"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+            <include
+                android:id="@+id/loadingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/loading_layout" />
+
+            <include
+                android:id="@+id/noInternetLayout"
+                layout="@layout/no_internet_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/loadMoreLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:visibility="gone">
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:indeterminateDuration="300"
+                    android:indeterminate="true"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminateDrawable="@drawable/rotate_loading_more_anim" />
+
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>

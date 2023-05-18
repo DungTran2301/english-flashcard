@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.dungtran.android.core.englishflashcard.utils.Constants" />
+        <variable
+            name="item"
+            type="com.dungtran.android.core.englishflashcard.ui.model.CardView" />
+        <variable
+            name="itemPosition"
+            type="Integer" />
+        <variable
+            name="itemListener"
+            type="com.dungtran.android.core.englishflashcard.ui.features.study.card.adapter.OnCardClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginVertical="@dimen/dp_40"
+        android:elevation="@dimen/dp_5"
+        app:cardCornerRadius="@dimen/dp_8"
+        android:onClick="@{() -> itemListener.onItemClick(item,itemPosition)}">
+        <ImageView
+            android:id="@+id/ivBackground"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_marginVertical="@dimen/dp_20">
+
+            <ImageView
+                android:id="@+id/imvSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginStart="@dimen/dp_20"
+                android:src="@drawable/ic_speaker"
+                android:onClick="@{() -> itemListener.onSpeakerClick(item)}"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSetNameFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:fontFamily="@font/poppins_regular"
+                android:lines="1"
+                android:text="@{item.front}"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                android:textColor="@color/accent_primary"
+                tools:text="Good morning"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhonetic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:fontFamily="@font/poppins_regular"
+                android:lines="1"
+                android:text="@{item.phonetic}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvSetNameFront"
+                app:layout_constraintTop_toBottomOf="@+id/tvSetNameFront"
+                tools:text="ɡʊd ˈmɔːnɪŋ" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_marginVertical="@dimen/dp_20"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSetNameBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:fontFamily="@font/poppins_regular"
+                android:lines="1"
+                android:text="@{item.back}"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                android:textColor="@color/accent_primary"
+                tools:text="Good morning"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

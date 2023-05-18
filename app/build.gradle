@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'org.jetbrains.kotlin.plugin.parcelize'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.dungtran.android.core.englishflashcard'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.dungtran.android.core.englishflashcard"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding {
+        enabled true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
+    }
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation nav_component_lib
+    implementation retrofit_lib
+    implementation okhttp_lib
+    implementation glide_lib
+    implementation room_lib
+
+    implementation 'com.google.dagger:hilt-android:2.44'
+    kapt 'com.google.dagger:hilt-android-compiler:2.44'
+
+    implementation 'androidx.fragment:fragment-ktx:1.5.6'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.0'
+    //circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    kapt glide_annotation
+    kapt room_runtime
+    annotationProcessor room_annotation
+    implementation event_bus_lib
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.5'
+    implementation 'com.google.mlkit:translate:17.0.1'
+
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
+
+    
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+    //
+    implementation 'androidx.paging:paging-runtime:3.1.1'
+
+    implementation 'com.airbnb.android:lottie:6.0.0'
+
+}

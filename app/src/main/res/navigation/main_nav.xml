@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.features.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_studyFragment"
+            app:destination="@id/studyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_setFragment"
+            app:destination="@id/setFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createSetFragment"
+            app:destination="@id/createSetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.features.setting.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/action_settingFragment_to_policyAndTermFragment"
+            app:destination="@id/policyAndTermFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studyFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.features.study.card.StudyFragment"
+        android:label="StudyFragment">
+        <argument
+            android:name="set"
+            app:argType="com.dungtran.android.core.englishflashcard.ui.model.SetView"/>
+        <argument
+            android:name="isRemote"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <action android:id="@+id/action_global_studyFragment" app:destination="@id/studyFragment"/>
+    <action android:id="@+id/action_global_settingFragment" app:destination="@id/settingFragment"/>
+    <action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment"/>
+    <fragment
+        android:id="@+id/setFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.features.setcards.SetFragment"
+        android:label="SetFragment" >
+
+        <argument
+            android:name="set"
+            app:argType="com.dungtran.android.core.englishflashcard.ui.model.SetView"/>
+        <argument
+            android:name="isRemote"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_setFragment_to_studyFragment"
+            app:destination="@id/studyFragment" />
+        <action
+            android:id="@+id/action_setFragment_to_multipleChoiceFragment"
+            app:destination="@id/multipleChoiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSetFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.features.createset.CreateSetFragment"
+        android:label="CreateSetFragment" />
+    <fragment
+        android:id="@+id/multipleChoiceFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.features.study.multiplechoice.MultipleChoiceFragment"
+        android:label="fragment_multiple_choice"
+        tools:layout="@layout/fragment_multiple_choice" >
+
+        <argument
+            android:name="set"
+            app:argType="com.dungtran.android.core.englishflashcard.ui.model.SetView"/>
+        <argument
+            android:name="isRemote"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/policyAndTermFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.core.PolicyAndTermFragment"
+        android:label="PolicyAndTermFragment">
+        <argument
+            android:name="param"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoveryFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.features.discovery.DiscoveryFragment"
+        android:label="DiscoveryFragment" >
+        <action
+            android:id="@+id/action_discoveryFragment_to_setFragment"
+            app:destination="@id/setFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.dungtran.android.core.englishflashcard.ui.features.user.UserFragment"
+        android:label="UserFragment" />
+</navigation>

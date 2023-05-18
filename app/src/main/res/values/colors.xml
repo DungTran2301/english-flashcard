@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    // base
+    <color name="main_color">#FFFFFF</color>
+    <color name="accent_primary">#3A427D</color>
+    <color name="accent_secondary">#FFB862</color>
+    <color name="background_color">#EFF1FD</color>
+    <color name="background_color_secondary">#F1F1FD</color>
+    <color name="text_primary">#2A2D3F</color>
+    <color name="text_secondary">#9E9EB8</color>
+    <color name="text_alpha">#343434</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="background">#F5F5F5</color>
+    <color name="status_bar_color">@color/accent_primary</color>#9E9EB8
+
+
+    // edt background
+    <color name="blue_bg">#EFF1FD</color>
+
+    <color name="blue_bg_dark">#E2E7FF</color>
+    //
+    <color name="fence_color">#C5C5C5</color>
+
+    <color name="green">#014B28</color>
+    <color name="green_light">#BC04B562</color>
+    <color name="red">#3C0000</color>
+    <color name="red_light">#B2B50404</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+
+    //theme
+    <color name="green_dark_theme">#008000</color>
+    <color name="green_light_theme">#98d998</color>
+
+    <color name="blue_dark_theme">#004c99</color>
+    <color name="blue_light_theme">#99ccff</color>
+
+    <color name="red_dark_theme">#bb0000</color>
+    <color name="red_light_theme">#e28080</color>
+    <color name="percent_text_color">#003554</color>
+</resources>
